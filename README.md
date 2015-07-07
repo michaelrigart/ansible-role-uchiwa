@@ -1,6 +1,6 @@
 Ansible Uchiwa Role
 ==================
-[![Build Status](https://travis-ci.org/michaelrigart/ansible-role-users.svg?branch=master)](https://travis-ci.org/michaelrigart/ansible-role-users)
+[![Build Status](https://travis-ci.org/michaelrigart/ansible-role-uchiwa.svg?branch=master)](https://travis-ci.org/michaelrigart/ansible-role-uchiwa)
 
 An ansible role for installing the Uchiwa dashboard for the Sensu monitor framework.
 Visit the [Uchiwa website](https://uchiwa.io) for more info
