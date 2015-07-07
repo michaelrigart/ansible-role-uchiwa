@@ -1,0 +1,14 @@
+---
+
+- include: package.yml
+  tags: package
+
+- include: configuration.yml
+  tags: configuration
+
+- name: start/stop uchiwa service
+  service:
+    name: 'uchiwa'
+    state: '{{ uchiwa_service_state }}'
+    enabled: '{{ uchiwa_service_enabled }}'
+  tags: service

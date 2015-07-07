@@ -1,0 +1,25 @@
+---
+
+uchiwa_service_state: 'started'
+uchiwa_service_enabled: 'true'
+uchiwa_ppa_key: 'http://repos.sensuapp.org/apt/pubkey.gpg'
+uchiwa_ppa_key_id: '7580C77F'
+uchiwa_ppa_repo: 'deb http://repos.sensuapp.org/apt sensu main'
+uchiwa_conf:
+  sensu:
+    - name: 'Site 1'
+      host: 'api1.example.com'
+      port: 4567
+      timeout: 5
+    - name: 'Site 2'
+      host: 'api2.example.com'
+      port: 4567
+      ssl: false
+      path: ''
+      user: ''
+      pass: ''
+      timeout: 5
+  uchiwa:
+    host: '0.0.0.0'
+    port: 3000
+    interval: 5

@@ -1,0 +1,21 @@
+---
+
+- name: repository - add the GPG key
+  apt_key:
+    url: '{{ uchiwa_ppa_key }}'
+    id: '{{ uchiwa_ppa_key_id }}'
+    state: present
+  when: uchiwa_ppa_key != None
+
+- name: add repository to install Uchiwa from
+  apt_repository:
+    repo: '{{ uchiwa_ppa_repo }}'
+    update_cache: yes
+  when: uchiwa_ppa_repo != None
+
+- name: install uchiwa
+  apt:
+    pkg: uchiwa
+    state: installed
+    update_cache: yes
+    cache_valid_time: 3600
